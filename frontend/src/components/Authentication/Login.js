@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { ChatState } from "../../Context/ChatProvider";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -20,7 +21,7 @@ const Login = () => {
   const toast = useToast();
   const history = useHistory();
 
-  // const { setUser } = ChatState();
+  const { setUser } = ChatState();
 
   const handleClick = () => setShow(!show);
 
@@ -58,7 +59,7 @@ const Login = () => {
         isClosable: true,
         position: "bottom",
       });
-      // setUser(data);
+      setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
       history.push("/chats");
