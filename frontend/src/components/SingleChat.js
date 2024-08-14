@@ -20,7 +20,7 @@ import ProfileModal from "./miscellaneous/ProfileModal";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import "./styles.css";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chatapp-sv1z.onrender.com";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
